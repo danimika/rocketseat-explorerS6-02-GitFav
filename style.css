@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: clamp(40%, 2vw + 1%, 62.5%);
+  
+  --white: #FFF;
+  --bg-color: #000;
+  
+  --placeholder: #7C7C8A;
+  --titulos: #E1E1E6;
+  --danger: #F75A68;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  clip: rect(0,0,0,0);
+}
+
+body {
+  background: #000;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+  color: var(--white);
+  height: 4.8rem;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+}
+
+#app {
+  margin: 11.5rem auto 11.6rem;
+  width: 112rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8.7rem;
+  padding: 2rem;
+
+}
+
+header { 
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header button {
+  border-radius: 5px;
+  background: #065E7C;
+  padding: 1.2rem 3.2rem;
+  gap: .8rem;
+  font-size: 1.4rem;
+  border: 0;
+  transition: all .2s;
+}
+
+header button:hover{
+  background: #FFF;
+  color: #065E7C;
+}
+
+header input {
+  border-radius: 5px;
+  background: #06181C;
+  border: 0;
+  padding: 1.6rem;
+  outline: 0;
+  width: 46.2rem;
+  font-size: 1.6rem;
+}
+
+header input::placeholder {
+  color: var(--placeholder);
+  font-size: 1.6rem;
+}
+
+
+
+
+.user {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}
+
+.user a {
+  text-decoration: none;
+  color: var(--titulos);
+}
+.user p,
+.user span {
+  font-size: 2rem;
+  line-height: 160%;
+}
+
+.user p {
+  font-weight: 700;
+
+}
+.user span {
+  font-weight: 400;
+}
+
+#table {
+  border-radius: 12px;
+  border: 1px solid #4A808C;
+  width: 100%;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  font-size: 2rem;
+  border-collapse: collapse;
+}
+
+table tr th {
+  background: #043444;
+  padding: 1.6rem 2.4rem 1.6rem 4rem;
+  text-align: left;
+}
+
+td {
+  padding: 2.4rem 2.4rem 2.4rem 4rem;
+}
+
+tr:nth-child(odd){
+  background: rgba(6, 22, 27, 0.50);
+}
+tr:nth-child(even){
+  background: #06181C;
+  border: 1px solid #4A808C;
+}
+
+tr td button {
+  background-color: transparent;
+  border: none;
+  color: var(--danger);
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 2rem;
+  cursor: pointer;
+}
